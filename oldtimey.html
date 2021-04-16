@@ -1,0 +1,77 @@
+<html>
+<head>
+<style>
+h1{
+  font-size: 50px;
+  color: #781234;
+}
+
+p{
+  font-style: italic;
+  font-family: sans-serif;
+  color: #991299
+}
+hr{
+  border: 3px dashed #906712
+}
+}
+body{
+  background color: #173458
+}
+</style>
+  <script>
+  function fortnightstodays()
+{
+var rest = 0;
+  var x = document.getElementById('number').value;
+  x = parseInt(x);
+  var res = "FortNights to days <br><hr><br>";
+  for(var i = 1; i <= x; i++)//internal vars cannot change outside loop
+  {
+  rest =  i * 14;
+    res = res +i + "  -  " + rest + "<br>";
+  }
+  document.getElementById('result').innerHTML = res;
+}
+  function slugstopounds()
+{
+var rest = 0;
+  var x = document.getElementById('number').value;
+  x = parseInt(x);
+  var res = "Slugs To Pounds <br><hr><br>";
+  for(var i = 1; i <= x; i++)//internal vars cannot change outside loop
+  {
+  rest =  i * 32.174;
+    res = res +i + "  -  " + rest + "<br>";
+  }
+  document.getElementById('result').innerHTML = res;
+}
+  function milestofurlongs()
+{
+var rest = 0;
+  var x = document.getElementById('number').value;
+  x = parseInt(x);
+  var res = "Miles to Furlongs <br><hr><br>";
+  for(var i = 1; i <= x; i++)//internal vars cannot change outside loop
+  {
+  rest =  i * 8;
+    res = res +i + "  -  " + rest + "<br>";
+  }
+  document.getElementById('result').innerHTML = res;
+}
+  </script>
+</head>
+<body>
+  <h1>Old Timey Unit Converter</h1>
+<h1>Start Value</h1>
+  <input type = "text" id = "number">
+     <h1>End Value</h1>
+  <input type = "text" id = "number">
+<br> <br>
+  <input type = "button" value = "Miles to Furlongs" onclick = "milestofurlongs()">
+    <input type = "button" value = "Slugs to Pounds" onclick = "slugstopounds()">
+      <input type = "button" value = "FortNights to days" onclick = "fortnightstodays()">
+  <br><hr><br>
+  <p id = "result"></p>
+</body>
+</html>
